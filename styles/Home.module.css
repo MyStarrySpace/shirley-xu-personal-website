@@ -1,3 +1,188 @@
+.main {
+  font-family: "Montserrat";
+}
+
+.primary {
+  background-color: #dad2d2;
+  color: #433945;
+}
+
+.primary h1 {
+  font-family: "Fira Sans";
+}
+
+.secondary {
+  background-color: #8b5e93;
+  color: #f7f7f3;
+}
+
+.navbar {
+  background-color: #db7792 !important;
+}
+
+.navbar a:visited {
+  color: #f7f7f3;
+}
+
+.navbar .link {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.dropdownmenu {
+  background-color: #db7792 !important;
+  color: #f7f7f3;
+  border-radius: 0px;
+  margin-top: 8px;
+  z-index: 1;
+}
+
+.navexpandicon {
+  display : flex;
+  vertical-align: top;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navexpandicon:hover {
+  color: #ffffff;
+}
+
+.dropdownitem:hover {
+  background-color: #d7a299 !important;
+}
+
+.link {
+  color: #f7f7f3;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.link:hover {
+  color: #344b67;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.focusbox {
+  border-radius: 25px;
+  box-shadow: 0px 10px 30px rgb(0 0 0 / 56%);
+  border-collapse: separate;
+  overflow: hidden;
+  margin: auto;
+}
+
+.introbg {
+  background-color: #93919e;
+  background-image: url("../images/Scene.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.introtitle {
+  margin-top: -0.5rem;
+  margin-bottom: -3rem;
+  text-align: right;
+}
+
+.portrait {
+  border-radius: 50%;
+  padding-left: 1.5rem;
+  position: relative;
+  border: 3px !important; 
+  border-style: dotted !important ;
+  align-self: right;
+}
+
+.portraitdiv {
+  margin-top: -1rem;
+  margin-bottom: -5rem;
+}
+
+.aboutmebtn {
+  background-color: #93919e;
+  color: #f7f7f3;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+}
+
+.contactmebtn {
+  background-color: #d7a299;
+  color: #f7f7f3;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+}
+
+.purplebg {
+  background-color: #604d64;
+  color: #f7f7f3;
+}
+
+.contactbg {
+  min-height: 350px;
+  margin-bottom: -200px;
+  overflow: hidden;
+  display: block;
+}
+
+.contactbg h1 {
+  font-family: "Fira Sans";
+}
+
+.servicescard {
+  box-shadow: 0px 1px 10px rgb(0 0 0 / 25%);
+  background-color: #f7f7f3;
+  border-radius: 5px;
+  color: #2c48a4;
+}
+
+.projects {
+  background-color: #f7f7f3;
+  color: #604d64;
+}
+
+.projectstitle {
+  color: #433945;
+}
+
+.cardbody {
+  text-align: center;
+  color: #604d64;
+}
+
+.cardtitle {
+  font-family: Telex;
+  text-align: center;
+  color: #433945;
+}
+
+.cardimg {
+  background-color: #db7792;
+  padding-top: 75%;
+  height: 0;
+  position: relative;
+}
+
+.cardfill {
+  border-radius: 6px;
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 56%);
+  background-color: #db7792;
+  display: block;
+  overflow: hidden;
+}
+
+.title {
+  font-family: "Fira Sans";
+  text-align: center;
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -8,114 +193,159 @@
   height: 100vh;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.fillwidth {
+  width: 100%; 
+  max-width: 100%;
 }
 
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.fillheight {
+  height: 100%; 
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.center {
+  margin: auto;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+@media (min-width: 0px) {
+  .introbg {
+    padding-top: 50px;
+    padding-bottom: 26px;
+  }
+
+  .cardfill {
+    width: 80%; 
+    margin: auto;
+    margin-top: -30px;
+  }
+
+  .navbarinline {
+    flex-direction: column !important;
+  }
+
+  .dropdownmenuopen {
+    position: relative;
+  }
+
+  .dropdownmenuclosed {
+    display: none;
+  }
+
+  .menuclosed {
+    display: none;
+  }
+
+  .menuopen {
+    display: block;
+  }
+
+  .navexpandicon {
+    display: block;
+  }
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+@media (min-width: 576px) {
+  .introbg {
+    padding-top: 70px;
+    padding-bottom: 26px;
+  }
+
+  .focusbox {
+  overflow: hidden;
+  margin: auto;
+  }
+
+  .constraincenter {
+    max-width: auto;
+  }
+
+  .cardfill{
+    width: 33%;
+    margin: auto;
+  }
+
+  .cardtext {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  /*.navbar .link {
+    display: none;
+  }*/
+
+  .navbar .link.icon {
+    float: right;
+    display: block;
+  }
+
+  .navbarinline {
+    flex-direction: row !important;
+  }
+
+  .dropdownmenuopen {
+    position: fixed;
+    display: block;
+  }
+
+  .dropdownmenuclosed {
+    display: none;
+  }
+
+  .menuclosed {
+    display: block;
+  }
+
+  .menuopen {
+    display: block;
+  }
+
+  .navexpandicon {
+    display: none;
+  }
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
+@media (min-width: 992px) {
+  .introbg {
+    padding-top: 150px;
+    padding-bottom: 126px;
+  }
 
-.title,
-.description {
-  text-align: center;
-}
+  .constraincenter {
+    max-width: 1200px;
+    margin: auto;
+  }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
+  .cardfill {
+    width: 80%; 
+    margin: auto;
+    margin-top: -30px;
+  }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
+  .cardtext {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
+  .navbar .link {
+    display: block;
+  }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
-}
+  .navbarinline {
+    flex-direction: row !important;
+  }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
+  .dropdownmenuopen {
+    position: fixed;
+  }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
+  .menuclosed {
+    display: block;
+  }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
+  .menuopen {
+    display: block;
+  }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+  .navexpandicon {
+    display: none;
   }
 }
