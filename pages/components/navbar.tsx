@@ -18,8 +18,8 @@ const ServicesDropdown: NextPage = () => {
         }>
         <a className={["nav-link dropdown-toggle", styles.link].join(' ') } href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">My Services</a>
         <motion.div initial="initial" animate='animate' transition={{ delay: 0.2 }} variants={{ 
-                    initial: { opacity: 0, "max-height": 0}, 
-                    animate: { opacity: 1, "max-height": 280}, 
+                    initial: { opacity: 0, "maxHeight": 0}, 
+                    animate: { opacity: 1, "maxHeight": 280}, 
                   }}>
             <div className={[styles.dropdownmenu, dropDownClass].join(' ')} aria-labelledby="dropdownMenuButton">
               <div className="nav-item px-2">
