@@ -80,7 +80,7 @@ class CollapsedDropdown extends Component {
                   <a className={[styles.link].join(' ')}>Contact Me</a>
                 </Link> 
               </li>
-              <ServicesDropdown />
+              {/*<ServicesDropdown />*/}
             </ul>
           </div>
         </div>

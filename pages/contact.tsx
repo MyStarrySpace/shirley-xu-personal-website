@@ -12,6 +12,10 @@ import Container from 'react-bootstrap/Container'
 import Navbar from './components/navbar'
 import Link from 'next/link'
 
+import iconGithub from '../images/iconGithub.svg'
+import iconLinkedIn from '../images/iconLinkedIn.svg'
+import iconFacebook from '../images/iconFacebook.svg'
+
 const ContactMePage: NextPage = () => {
 	return (
 		<div>
@@ -73,13 +77,13 @@ const ContactMeForm: NextPage = () => {
   };
   return (
 	<div className={['container-sm mt-5'].join(' ')}>
-		<div className={['row justify-content-md-center'].join(' ')}>
+		<div className={['row justify-content-md-center mb-5'].join(' ')}>
 			<div className={'col-1'}></div>
   		<div className={['col-10'].join(' ')}> 
 		  	<div className={[styles.focusbox].join(' ')}>
 			    <form onSubmit={handleSubmit}>
 			    	<div className="row p-0">
-			    		<div className={["col-7 p-5", styles.primary].join(' ')}>
+			    		<div className={["col-sm-12 col-lg-7 p-5", styles.primary].join(' ')}>
 			    			<div className="row mb-3">
 					    		<div className="col px-3">
 						    		<label htmlFor="name">Name</label>
@@ -108,17 +112,60 @@ const ContactMeForm: NextPage = () => {
 			    				<div className="col px-3">
 				    				<label htmlFor="message">Message</label>
 				    				<br />
-				    				<textarea id="message" name="message" className={[styles.fillwidth].join(' ')} rows={8} maxlength="100000" required />
+				    				<textarea id="message" name="message" className={[styles.fillwidth].join(' ')} rows={8} maxLength="100000" required />
 			    				</div>
 			    			</div>
 			    			<div className="row mb-3 p-0">
 			    				<div className="col px-3">
-			    					<button type="submit" className={["btn p-3 mt-1", styles.contactmebtn, styles.fillwidth].join(' ')}>Submit</button>
+			    					<button type="submit" className={["btn p-3 mt-1", styles.contactmebtn, styles.fillwidth].join(' ')}>{status}</button>
 			    				</div>
 			    			</div>
 			    		</div>
-			    		<div className={["col-5 p-5", styles.purplebg].join(' ')}>
-			    			Hi
+		    			<div className={["col-sm-12 col-lg-5 p-5", styles.purplebg].join(' ')}>
+		    				<div className={["row gy-3"].join(' ')}>
+				    			<div className={["col-sm-4 col-lg-12"].join(' ')}>
+				    				<a href="http://github.com/MyStarrySpace" className={"text-decoration-none text-white"}>
+				    					<div className={["row"].join(' ')}>
+					    					<div className={["col-sm-12 col-lg-3 col-xl-2", styles.center].join(' ')}>
+						    					<Image src={iconGithub} alt="" width="100" height="100"/>
+						    				</div>
+						    				<div className={["col-sm-12 col-lg-9", styles.center].join(' ')}>
+						    					<div className={["row"].join(' ')}>
+					    							Github<span className={styles.sociallink}>.com/MyStarrySpace</span>
+					    						</div>
+					    					</div>	
+					    				</div>
+					    			</a>
+				    			</div>
+				    			<div className={["col-sm-4 col-lg-12"].join(' ')}>
+				    				<a href="http://linkedin.com/in/MyStarrySpace" className={"text-decoration-none text-white"}>
+				    					<div className={["row"].join(' ')}>
+					    					<div className={["col-sm-12 col-lg-3 col-xl-2", styles.center].join(' ')}>
+						    					<Image src={iconLinkedIn} alt="" width="100" height="100"/>
+						    				</div>
+						    				<div className={["col-sm-12 col-lg-9", styles.center].join(' ')}>
+						    					<div className={["row"].join(' ')}>
+						    							LinkedIn<span className={styles.sociallink}>.com/in/Mystarryspace</span>
+						    					</div>
+						    				</div>	
+					    				</div>
+					    			</a>
+				    			</div>
+				    			<div className={["col-sm-4 col-lg-12"].join(' ')}>
+				    				<a href="facebook.com/MyStarrySpace" className={"text-decoration-none text-white"}>
+				    					<div className={["row"].join(' ')}>
+					    					<div className={["col-sm-12 col-lg-3 col-xl-2", styles.center].join(' ')}>
+						    					<Image src={iconFacebook} alt="" width="100" height="100"/>
+						    				</div>
+						    				<div className={["col-sm-12 col-lg-9", styles.center].join(' ')}>
+						    					<div className={["row"].join(' ')}>
+						    							Facebook<span className={styles.sociallink}>.com/Mystarryspace</span>
+					    						</div>
+					    					</div>	
+					    				</div>
+					    			</a>
+				    			</div>
+					    	</div>
 			    		</div>
 			    	</div>	
 			    </form>

@@ -211,6 +211,11 @@
 
 .centerh {
   display: flex;
+ justify-content: center;
+}
+
+.centerv {
+  display: flex;
   align-items: center;
 }
 
@@ -252,6 +257,10 @@
 
   .navexpandicon {
     display: block;
+  }
+
+  .sociallink {
+    display: none;
   }
 }
 
@@ -313,6 +322,10 @@
   .navexpandicon {
     display: none;
   }
+
+  .sociallink {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) {
@@ -359,5 +372,15 @@
 
   .navexpandicon {
     display: none;
+  }
+
+  .sociallink {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sociallink {
+    display: contents;
   }
 }

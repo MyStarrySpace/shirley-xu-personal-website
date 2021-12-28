@@ -17,7 +17,7 @@ const AboutMeIntro: NextPage = () => {
 	return (
 		<>
 		 	<div className={['container-sm mt-5', styles.centerh].join(' ')}>
-		  	<div className={['row justify-content-md-center'].join(' ')}>
+		  	<div className={['row justify-content-md-center mb-5'].join(' ')}>
 		  		<div className={'col-1'}></div>
 			 		<div className={['col-10'].join(' ')}> 
 				  	<div className={[styles.focusbox].join(' ')}>
@@ -90,10 +90,15 @@ const AboutMeIntro: NextPage = () => {
 						        	throughout various areas of my life, I also took an interest in the life sciences; through my own initiative, I took courses in organic chemistry and molecular biology
 						        	with hope of expanding my knowledge of myself and the world around me. I'm a self-taught artist as well, creating concept art and illustration.
 						       	</p>
+						       	<p>
+						       		I am very quick to adapt to new technologies; at my internship at Dell EMC, I was able to commit code for my first ticket to improve the Escalation Engineering tool suite within my first week. 
+						       		It really warmed my heart when my supervisor told me that they are still using the tool I made months later! 
+						       		I take pride in being a quick learner and adapting well to new environments. After all, life changes quickly, and it is important to always be improving.
+						       	</p>
 					    		</div>
 					    		<div className="row mb-3 p-0">
 					    			<div className="col px-3">
-					    				<a href="/files/shirley-xu-resume.pdf" class={"text-decoration-none"} download>
+					    				<a href="/files/shirley-xu-resume.pdf" className={"text-decoration-none"} download>
 					    					<button className={["btn p-3 mt-1", styles.contactmebtn, styles.fillwidth].join(' ')}>Download my Resume</button>
 					    				</a>
 					    			</div>
@@ -103,6 +108,7 @@ const AboutMeIntro: NextPage = () => {
 					   </div>
 				   <div className={'col-1'}></div>
 					</div>
+					<div className={'col-1'}></div>
 				</div>
 			</div>
 		</>
