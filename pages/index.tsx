@@ -9,9 +9,9 @@ import Link from 'next/link'
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
 
-import imgWebDesign from '../images/WebDesign.png'
-import imgWebDevelopment from '../images/WebDevelopment.png'
-import imgIllustration from '../images/Illustration.png'
+import imgWebDesign from '../images/WebDesign.svg'
+import imgWebDevelopment from '../images/WebDevelopment.svg'
+import imgIllustration from '../images/Illustration.svg'
 import Portrait from '../images/Portrait.jpeg'
 
 const Intro: NextPage = () => {
@@ -33,11 +33,11 @@ const Intro: NextPage = () => {
                         Hello! My name is
                         <h1 className={["my-0"].join(' ')}>Shirley Xu</h1>
                       </div>
-                      <div className={["col-4", styles.portraitdiv].join(' ')}>
+                      <div className={["col-3", styles.portraitdiv].join(' ')}>
                         <Image src={Portrait} className={[styles.portrait].join(' ')} width="150" height="150"/>
                       </div>
                       
-                      <div className="col-2"></div>
+                      <div className="col-3"></div>
                     </div>
                   </div>
                   <div className="bg-light p-5">
@@ -188,7 +188,7 @@ const Home: NextPage = () => {
     <div className={styles.main}>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Montserrat&family=Telex&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

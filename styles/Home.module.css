@@ -203,7 +203,19 @@
 }
 
 .center {
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.centerh {
+  display: flex;
+  align-items: center;
+}
+
+.aboutmeicon {
+  max-width: 50px;
 }
 
 @media (min-width: 0px) {
