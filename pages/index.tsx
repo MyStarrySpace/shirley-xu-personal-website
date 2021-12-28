@@ -82,11 +82,11 @@ const Intro: NextPage = () => {
 interface CardContents {
   title: string;
   body: string;
-  image: Image;
+  image: any;
   delay: number;
 }
 
-const ServiceCard: NextPage = (contents: CardContents) => {
+const ServiceCard: any = (contents: CardContents) => {
   const [ref, inView] = useInView({ threshold: 0.2,})
 
   const controls = useAnimation();

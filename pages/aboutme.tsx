@@ -81,14 +81,14 @@ const AboutMeIntro: NextPage = () => {
 					    		<div className="row mb-3">
 							   		<p>
 						        	My name is Shirley Xu, and I love sharing my creativity with the world by building products that are well-designed and user-friendly. 
-						        	I've loved programming and being creative ever since I was a kid; at the age of 8, I discovered the Scratch programming language, and that's where it all began.
+						        	I&apos;ve loved programming and being creative ever since I was a kid; at the age of 8, I discovered the Scratch programming language, and that&apos;s where it all began.
 						        	I made small games and animations, combining my knowledge of programming and art to make my creative inklings into reality. Fifteen years later, I am still working on making ideas come to life.
 						        	I love to learn about nearly everything, as I notice how design and patterns factor into many aspects of everyday life and the systems that fuel it.
 						       	</p>
 						       	<p>
-						        	I graduated with my Bachelor's in Computer Science in 2020 with a minor in Linguistics. Towards the end of my college career, however, as COVID became more pervasive
+						        	I graduated with my Bachelor&apos;s in Computer Science in 2020 with a minor in Linguistics. Towards the end of my college career, however, as COVID became more pervasive
 						        	throughout various areas of my life, I also took an interest in the life sciences; through my own initiative, I took courses in organic chemistry and molecular biology
-						        	with hope of expanding my knowledge of myself and the world around me. I'm a self-taught artist as well, creating concept art and illustration.
+						        	with hope of expanding my knowledge of myself and the world around me. I&apos;m a self-taught artist as well, creating concept art and illustration.
 						       	</p>
 						       	<p>
 						       		I am very quick to adapt to new technologies; at my internship at Dell EMC, I was able to commit code for my first ticket to improve the Escalation Engineering tool suite within my first week. 

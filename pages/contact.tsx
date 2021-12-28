@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { CSSTransitionGroup } from 'react-transition-group'
 
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
@@ -53,10 +52,10 @@ const ContactMePage: NextPage = () => {
 
 const ContactMeForm: NextPage = () => {
 	const [status, setStatus] = useState("Submit");
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setStatus("Sending...");
-    const { name, email, message } = e.target.elements;
+    const { name, email, phonenumber, company, message } = e.target.elements;
     let details = {
       name: name.value,
       email: email.value,
@@ -112,7 +111,7 @@ const ContactMeForm: NextPage = () => {
 			    				<div className="col px-3">
 				    				<label htmlFor="message">Message</label>
 				    				<br />
-				    				<textarea id="message" name="message" className={[styles.fillwidth].join(' ')} rows={8} maxLength="100000" required />
+				    				<textarea id="message" name="message" className={[styles.fillwidth].join(' ')} rows={8} maxLength={100000} required />
 			    				</div>
 			    			</div>
 			    			<div className="row mb-3 p-0">
