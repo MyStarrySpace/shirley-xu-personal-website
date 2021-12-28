@@ -34,7 +34,7 @@ const Intro: NextPage = () => {
                         <h1 className={["my-0"].join(' ')}>Shirley Xu</h1>
                       </div>
                       <div className={["col-3", styles.portraitdiv].join(' ')}>
-                        <Image src={Portrait} className={[styles.portrait].join(' ')} width="150" height="150"/>
+                        <Image src={Portrait} alt={"Portrait of Shirley Xu"} className={[styles.portrait].join(' ')} width="150" height="150"/>
                       </div>
                       
                       <div className="col-3"></div>
@@ -108,7 +108,7 @@ const ServiceCard: any = (contents: CardContents) => {
           <div ref={ref} className={[styles.servicescard, 'card h-100'].join(' ')}>
             <div className="row">
               <div className={[styles.cardfill, 'col-xs-12 col-sm-4 col-lg-12'].join(' ')}>
-                <Image src={contents.image} className={styles.cardimg}/>
+                <Image src={contents.image} alt={contents.title} className={styles.cardimg}/>
               </div>
               <div className={[styles.cardtext, 'col-xs-12 col-sm-8 col-lg-12'].join(' ')}>
                 <h5 className={[styles.cardtitle, 'card-title mt-4 mb-0 px-3'].join(' ')}>
@@ -185,20 +185,11 @@ const Projects: NextPage = () => {
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.main}>
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Montserrat&family=Telex&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
-
-      <Navbar />
+    <>
       <Intro />
       <Services />
       <Projects />        
-    </div>
+    </>
   );
 }
 

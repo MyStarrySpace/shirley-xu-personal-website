@@ -116,7 +116,7 @@ const AboutMeIntro: NextPage = () => {
 	
 }
 
-const AboutMePage: NextPage = () => {
+const AboutMe: NextPage = () => {
   return (
 		<div>
 			<div className={[styles.purplebg, styles.contactbg].join(' ')}>
@@ -149,22 +149,6 @@ const AboutMePage: NextPage = () => {
 		</div>
 		
 	);
-}
-
-const AboutMe: NextPage = () => {
-  return (
-    <div className={styles.main}>
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Montserrat&family=Telex&display=swap" rel="stylesheet" />
-      </Head>
-
-      <Navbar />
-      <AboutMePage />  
-        
-    </div>
-  );
 }
 
 export default AboutMe

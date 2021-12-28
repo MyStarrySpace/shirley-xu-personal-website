@@ -15,7 +15,7 @@ import iconGithub from '../images/iconGithub.svg'
 import iconLinkedIn from '../images/iconLinkedIn.svg'
 import iconFacebook from '../images/iconFacebook.svg'
 
-const ContactMePage: NextPage = () => {
+const ContactMe: NextPage = () => {
 	return (
 		<div>
 			<div className={[styles.purplebg, styles.contactbg].join(' ')}>
@@ -174,23 +174,6 @@ const ContactMeForm: NextPage = () => {
 		</div>
 	</div>
   )	
-}
-
-
-const ContactMe: NextPage = () => {
-  return (
-    <div className={styles.main}>
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Montserrat&family=Telex&display=swap" rel="stylesheet" />
-      </Head>
-
-      <Navbar />
-      <ContactMePage />  
-        
-    </div>
-  );
 }
 
 export default ContactMe
