@@ -8,10 +8,10 @@ import Navbar from './components/navbar'
 import Link from 'next/link'
 import { motion, useAnimation } from "framer-motion"
 
-import iconEducation from '../images/iconEducation.svg'
-import iconExperience from '../images/iconExperience.svg'
-import iconGlobe from '../images/iconGlobe.svg'
-import iconInterests from '../images/iconInterests.svg'
+import iconEducation from '../public/images/iconEducation.svg'
+import iconExperience from '../public/images/iconExperience.svg'
+import iconGlobe from '../public/images/iconGlobe.svg'
+import iconInterests from '../public/images/iconInterests.svg'
 
 const AboutMeIntro: NextPage = () => {
 	return (

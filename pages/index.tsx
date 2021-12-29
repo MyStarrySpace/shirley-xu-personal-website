@@ -9,10 +9,10 @@ import Link from 'next/link'
 import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
 
-import imgWebDesign from '../images/WebDesign.svg'
-import imgWebDevelopment from '../images/WebDevelopment.svg'
-import imgIllustration from '../images/Illustration.svg'
-import Portrait from '../images/shirley-portrait.jpg'
+import imgWebDesign from '../public/images/WebDesign.svg'
+import imgWebDevelopment from '../public/images/WebDevelopment.svg'
+import imgIllustration from '../public/images/Illustration.svg'
+import Portrait from '../public/images/shirley-portrait.jpg'
 
 const Intro: NextPage = () => {
   return (
@@ -34,7 +34,7 @@ const Intro: NextPage = () => {
                         <h1 className={["my-0"].join(' ')}>Shirley Xu</h1>
                       </div>
                       <div className={["col-3", styles.portraitdiv].join(' ')}>
-                        <Image src={Portrait} alt={"Portrait of Shirley Xu"} className={[styles.portrait].join(' ')} width="150" height="150"/>
+                        <Image src={Portrait} alt={"Portrait of Shirley Xu"} className={[styles.portrait].join(' ')} width="130" height="130"/>
                       </div>
                       
                       <div className="col-3"></div>
