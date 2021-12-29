@@ -42,7 +42,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse<ResponseData>) => {
   };
   contactEmail.sendMail(mail, (error: Error) => {
     if (error) {
-      res.status(500).json({ status: "Failed to send message" })
+      res.status(500).json({ status: error.message })
     } else {
       res.status(200).json({ status: "Message Sent" })
     }
