@@ -28,18 +28,23 @@ export default async (req:NextApiRequest, res:NextApiResponse<ResponseData>) => 
     secure: true,
   });
 
-  await new Promise((resolve, reject) => {
-    // verify connection configuration
-    transporter.verify(function (error: Error, success: any) {
-        if (error) {
-            console.log(error);
-            reject(error);
-        } else {
-            console.log("Server is ready to take our messages");
-            resolve(success);
-        }
+  try {
+    await new Promise((resolve, reject) => {
+      // verify connection configuration
+      transporter.verify(function (error: Error, success: any) {
+          if (error) {
+              console.log(error);
+              reject(error);
+          } else {
+              console.log("Server is ready to take our messages");
+              resolve(success);
+          }
+      });
     });
-  });
+  } catch (error) {
+    console.log(error)
+  }
+  
 
   const name = req.body.name;
   const email = req.body.email;
