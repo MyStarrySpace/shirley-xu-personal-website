@@ -63,7 +63,7 @@ const ContactMeForm: NextPage = () => {
       company: company.value,
       message: message.value,
     };
-    let response = await fetch("/api/contact", {
+    let response = await fetch("/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -72,9 +72,9 @@ const ContactMeForm: NextPage = () => {
       body: JSON.stringify(details),
     });
     setStatus("Submit");
-    // let result = await response.json();
-    // console.log("Submitted")
-    // alert(result.status);
+    let result = await response.json();
+    console.log("Submitted")
+    alert(result.status);
   };
   return (
 	<div className={['container-sm mt-5'].join(' ')}>

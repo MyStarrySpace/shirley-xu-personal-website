@@ -1,16 +1,16 @@
-const express = require("express");
-const router = express.Router();
-const cors = require("cors");
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { NextApiRequest, NextApiResponse } from 'next'
+
 const nodemailer = require("nodemailer");
-
-const app = express();
-
 require('dotenv').config();
 
-app.use(cors());
-app.use(express.json());
-app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
+type Data = {
+  name: string
+  email: string
+  phonenumber: string
+  company: string
+  message: string
+}
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
@@ -20,7 +20,7 @@ const contactEmail = nodemailer.createTransport({
   },
 });
 
-contactEmail.verify((error) => {
+contactEmail.verify((error: Error) => {
   if (error) {
     console.log(error);
   } else {
@@ -28,7 +28,10 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/contact", (req, res) => {
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
   const name = req.body.name;
   const email = req.body.email;
   const phonenumber = req.body.phonenumber;
@@ -44,11 +47,11 @@ router.post("/contact", (req, res) => {
            <p>Company: ${company}</p>
            <p>Message: ${message}</p>`,
   };
-  contactEmail.sendMail(mail, (error) => {
+  contactEmail.sendMail(mail, (error: Error) => {
     if (error) {
-      res.json({ status: "ERROR" });
+      return res.status(400).json({ status: "ERROR" })
     } else {
-      res.json({ status: "Message Sent" });
+      return res.status(200).json({ status: "Message Sent" })
     }
   });
-});
+}
