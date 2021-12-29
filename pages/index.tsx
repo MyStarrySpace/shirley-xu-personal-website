@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import ProjectList from './components/projectlist'
+import ProjectList from './/components/projectlist'
 
 import Container from 'react-bootstrap/Container'
 import Link from 'next/link'
