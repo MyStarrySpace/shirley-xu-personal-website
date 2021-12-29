@@ -12,9 +12,9 @@ import Navbar from './components/navbar'
 import Link from 'next/link'
 import { useForm, ValidationError } from '@formspree/react';
 
-import iconGithub from '../images/iconGithub.svg'
-import iconLinkedIn from '../images/iconLinkedIn.svg'
-import iconFacebook from '../images/iconFacebook.svg'
+import iconGithub from '../public/images/iconGithub.svg'
+import iconLinkedIn from '../public/images/iconLinkedIn.svg'
+import iconFacebook from '../public/images/iconFacebook.svg'
 
 const ContactMe: NextPage = () => {
 	return (

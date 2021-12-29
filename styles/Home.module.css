@@ -78,7 +78,7 @@
 
 .introbg {
   background-color: #93919e;
-  background-image: url("../images/Scene.png");
+  background-image: url("../public/images/Scene.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -95,7 +95,7 @@
   padding-left: 1.5rem;
   position: relative;
   border: 3px !important; 
-  border-style: dotted !important ;
+  border-style: solid !important ;
   align-self: right;
 }
 
@@ -130,10 +130,14 @@
   margin-bottom: -200px;
   overflow: hidden;
   display: block;
-  background-image: url("../images/shirley-xu-about-me-bg.jpg");
+  background-image: url("../public/images/shirley-xu-about-me-bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+
+.aboutmebg h1 {
+  font-family: "Fira Sans";
 }
 
 .contactbg {
