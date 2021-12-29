@@ -1,23 +1,19 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+const nodemailer = require("nodemailer");
+
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-type ResponseData = {
-  status: string
-}
-
-const nodemailer = require("nodemailer");
-require('dotenv').config();
-
-export default async (req: NextApiRequest, res: NextApiResponse<ResponseData>) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
 
 const { firstName, lastName, email, message } = JSON.parse(req.body);
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_ADDRESS,
-    pass: process.env.EMAIL_PASSWORD,
-  }
+    port: 465,
+    host: "smtp.gmail.com",
+    auth: {
+        user: "myEmail@gmail.com",
+        pass: "password",
+    },
+    secure: true,
 });
 
 await new Promise((resolve, reject) => {
@@ -47,23 +43,16 @@ const mailData = {
 
 await new Promise((resolve, reject) => {
     // send mail
-    transporter.sendMail(mailData, (error: Error, info: any) => {
-      if (error) {
-        console.error(error);
-        reject(error);
-      } else {
-          console.log(info);
-          resolve(info);
-      }
+    transporter.sendMail(mailData, (err: Error, info: any) => {
+        if (err) {
+            console.error(err);
+            reject(err);
+        } else {
+            console.log(info);
+            resolve(info);
+        }
     });
 });
 
 res.status(200).json({ status: "OK" });
 };
-
-
-export const config = {
-  api: {
-    externalResolver: true,
-  },
-}
