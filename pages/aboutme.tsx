@@ -30,7 +30,7 @@ const AboutMeIntro: NextPage = () => {
 				    				<div className={["col-sm-6 col-lg-12"].join(' ')}>
 					    				<div className={["row"].join(' ')}>
 				    						<div className={["col-sm-12 col-lg-3", styles.center].join(' ')}>
-						    					<Image src={iconEducation} alt="" width="100" height="100"/>
+						    					<Image src={iconEducation} alt="" width="80" height="80"/>
 						    				</div>
 						    				<div className={["col-sm-12 col-lg-9", styles.center].join(' ')}>
 						    					<div className={["row"].join(' ')}>B. S. Computer Science
@@ -42,7 +42,7 @@ const AboutMeIntro: NextPage = () => {
 					    			<div className={["col-sm-6 col-lg-12"].join(' ')}>
 					    				<div className={["row"].join(' ')}>
 					    					<div className={["col-sm-12 col-lg-3", styles.center].join(' ')}>
-						    					<Image src={iconExperience} alt="" width="100" height="100"/>
+						    					<Image src={iconExperience} alt="" width="80" height="80"/>
 						    				</div>
 						    				<div className={["col-sm-12 col-lg-9", styles.center].join(' ')}>
 						    					<div className={["row"].join(' ')}>
@@ -54,7 +54,7 @@ const AboutMeIntro: NextPage = () => {
 					    			<div className={["col-sm-6 col-lg-12"].join(' ')}>
 					    				<div className={["row"].join(' ')}>
 					    					<div className={["col-sm-12 col-lg-3", styles.center].join(' ')}>
-						    					<Image src={iconInterests} alt="" width="100" height="100"/>
+						    					<Image src={iconInterests} alt="" width="80" height="80"/>
 						    				</div>
 						    				<div className={["col-sm-12 col-lg-9", styles.center].join(' ')}>
 						    					<div className={["row"].join(' ')}>
@@ -66,7 +66,7 @@ const AboutMeIntro: NextPage = () => {
 					    			<div className={["col-sm-6 col-lg-12"].join(' ')}>
 					    				<div className={["row"].join(' ')}>
 					    					<div className={["col-sm-12 col-lg-3", styles.center].join(' ')}>
-						    					<Image src={iconGlobe} alt="" width="100" height="100"/>
+						    					<Image src={iconGlobe} alt="" width="80" height="80"/>
 						    				</div>
 						    				<div className={["col-sm-12 col-lg-9", styles.center].join(' ')}>
 						    					<div className={["row"].join(' ')}>
