@@ -105,16 +105,16 @@
 }
 
 .aboutmebtn {
-  background-color: #93919e;
-  color: #f7f7f3;
+  background-color: #93919e !important;
+  color: #f7f7f3 !important;
   box-sizing: border-box;
   width: 100%;
   display: block;
 }
 
 .contactmebtn {
-  background-color: #d7a299;
-  color: #f7f7f3;
+  background-color: #d7a299 !important;
+  color: #f7f7f3 !important;
   box-sizing: border-box;
   width: 100%;
   display: block;
@@ -244,10 +244,13 @@
     padding-bottom: 26px;
   }
 
+  .servicescard {
+    margin-top: 2.5rem !important;
+  }
+
   .cardfill {
     width: 80%; 
-    margin: auto;
-    margin-top: -30px;
+    margin: -30px auto auto !important;
   }
 
   .navbarinline {
@@ -285,6 +288,10 @@
     padding-bottom: 26px;
   }
 
+  .servicescard {
+    margin-top: inherit !important;
+  }
+
   .focusbox {
   overflow: hidden;
   margin: auto;
@@ -296,7 +303,7 @@
 
   .cardfill{
     width: 33%;
-    margin: auto;
+    margin: auto !important;
   }
 
   .cardtext {
@@ -355,9 +362,8 @@
   }
 
   .cardfill {
-    width: 80%; 
-    margin: auto;
-    margin-top: -30px;
+    width: 80% !important; 
+    margin: -30px auto auto !important;
   }
 
   .cardtext {
