@@ -4,12 +4,8 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 const nodemailer = require("nodemailer");
 require('dotenv').config();
 
-type Data = {
-  name: string
-  email: string
-  phonenumber: string
-  company: string
-  message: string
+type ResponseData = {
+  status: string
 }
 
 const contactEmail = nodemailer.createTransport({
@@ -30,7 +26,7 @@ contactEmail.verify((error: Error) => {
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<ResponseData>
 ) {
   const name = req.body.name;
   const email = req.body.email;
@@ -49,9 +45,9 @@ export default function handler(
   };
   contactEmail.sendMail(mail, (error: Error) => {
     if (error) {
-      return res.status(400).json({ status: "ERROR" })
+      res.status(500).json({ status: "ERROR" })
     } else {
-      return res.status(200).json({ status: "Message Sent" })
+      res.status(200).json({ status: "Message Sent" })
     }
   });
 }
