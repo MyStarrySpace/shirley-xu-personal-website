@@ -12,7 +12,7 @@ import { useInView } from 'react-intersection-observer';
 import imgWebDesign from '../images/WebDesign.svg'
 import imgWebDevelopment from '../images/WebDevelopment.svg'
 import imgIllustration from '../images/Illustration.svg'
-import Portrait from '../images/Portrait.jpeg'
+import Portrait from '../images/shirley-portrait.jpg'
 
 const Intro: NextPage = () => {
   return (

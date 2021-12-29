@@ -119,7 +119,7 @@ const AboutMeIntro: NextPage = () => {
 const AboutMe: NextPage = () => {
   return (
 		<div>
-			<div className={[styles.purplebg, styles.contactbg].join(' ')}>
+			<div className={[styles.purplebg, styles.aboutmebg].join(' ')}>
 				<div className="container-sm">
 					<div className="row justify-content-md-center">
 						<div className="col-1" />
