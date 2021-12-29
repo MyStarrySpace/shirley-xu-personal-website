@@ -51,7 +51,7 @@ const ContactMe: NextPage = () => {
 	);
 }
 
-const ContactMeForm: NextPage = () => {
+const OnContactMeFormSubmit: NextPage = () => {
 	const [state, handleSubmit] = useForm("mayvnedz", {
 		data: { 
 		}
@@ -59,6 +59,35 @@ const ContactMeForm: NextPage = () => {
 	console.log(useForm("mayvnedz"))
 	if (state.succeeded) {
 		return <p>Thanks for joining!</p>;
+	}
+	return (
+		<div className={['container-sm mt-5'].join(' ')}>
+			<div className={['row justify-content-md-center mb-5'].join(' ')}>
+				<div className={'col-1'}></div>
+			<div className={['col-10'].join(' ')}> 
+				<div className={[styles.focusbox].join(' ')}>
+					<div className="row p-0">
+						<div className={["col p-5", styles.primary].join(' ')}>
+							<h1>Thank you!</h1>
+							<p>I am always on the lookout for new messages, and I will try to contact you back as soon as possible. </p>
+						</div>
+					</div>	
+				</div>
+				</div>
+				<div className={'col-1'}></div>
+			</div>
+		</div>
+	)	
+}
+
+const ContactMeForm: NextPage = () => {
+	const [state, handleSubmit] = useForm("mayvnedz", {
+		data: { 
+		}
+	});
+	console.log(useForm("mayvnedz"))
+	if (state.succeeded) {
+		return <OnContactMeFormSubmit />;
 	}
 	return (
 		<div className={['container-sm mt-5'].join(' ')}>
