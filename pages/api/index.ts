@@ -19,10 +19,12 @@ type ResponseData = {
 export default async (req:NextApiRequest, res:NextApiResponse<ResponseData>) => {
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
-      user: "sternenraum@gmail.com",
-      pass: "Imaginets12332155",
+      user: process.env.EMAIL_ADDRESS,
+      pass: process.env.EMAIL_PASSWORD,
     }
   });
 
