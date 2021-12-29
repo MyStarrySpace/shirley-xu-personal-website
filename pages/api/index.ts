@@ -4,6 +4,14 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 const nodemailer = require("nodemailer");
 require('dotenv').config();
 
+type RequestData = {
+  name: string,
+  email: string,
+  phonenumber: string,
+  company: string,
+  message: string, 
+}
+
 type ResponseData = {
   status: string
 }
@@ -49,24 +57,23 @@ export default async (req:NextApiRequest, res:NextApiResponse<ResponseData>) => 
           <p>Message: ${message}</p>`,
   };
 
-  await new Promise((resolve, reject) => {
-      // send mail
-      transporter.sendMail(mail, (err: Error, info: any) => {
-          if (err) {
-              console.error(err);
-              reject(err);
-          } else {
-              console.log(info);
-              resolve(info);
-          }
-      });
-  });
+  try {
+    await new Promise((resolve, reject) => {
+        // send mail
+        transporter.sendMail(mail, (err: Error, info: any) => {
+            if (err) {
+                console.error(err);
+                reject(err);
+            } else {
+                console.log(info);
+                resolve(info);
+            }
+        });
+    });
+  } catch (error) {
+    console.log("There was an error sending the mail");
+  }
+  
 
   res.status(200).json({ status: "OK" });
 };
-
-export const config = {
-  api: {
-    externalResolver: true,
-  },
-}
