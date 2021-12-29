@@ -143,7 +143,7 @@ const Services: NextPage = () => {
   return (
     <div className={styles.purplebg}> 
       <div className={["container-fluid p-5"].join(' ')}>
-        <div className={[styles.title, "py-4"].join(' ')}>
+        <div className={[styles.title, "pt-4"].join(' ')}>
           <h2> What can I do for you? </h2>
         </div>
         <div className={["row g-4 my-5", styles.constraincenter].join(' ')}>
@@ -160,7 +160,7 @@ const Projects: NextPage = () => {
   return(
     <div className={styles.projects}>
       <div className={["container-md p-5"].join(' ')}>
-        <h1 className={[styles.projectstitle, styles.title, "py-4"].join(' ')}>
+        <h1 className={[styles.projectstitle, styles.title, "pt-4"].join(' ')}>
           My projects
         </h1>
         <div className="row g-4 my-5">
@@ -176,6 +176,11 @@ const Projects: NextPage = () => {
           <div className="col">
             Coming soon! I have been drawing for 7+ years and won the Gold Scholastic Art Award in 2016. I have a passion for art and illustration.
           </div>
+        </div>
+        <div className="row">
+          <a href="#" className={"text-decoration-none p-4"}>
+            <button className={["btn p-3 mt-1", styles.contactmebtn, styles.fillwidth].join(' ')}>View more projects</button>
+          </a>
         </div>
       </div>
     </div>
