@@ -47,17 +47,20 @@ const mailData = {
 
 await new Promise((resolve, reject) => {
     // send mail
-    transporter.sendMail(mailData, (error: Error, success: any) => {
+    transporter.sendMail(mailData, (error: Error, info: any) => {
       if (error) {
-        return res.status(500).json({ status: error.message })
+        console.error(error);
+        reject(error);
       } else {
-        return res.status(200).json({ status: "Message Sent" })
+          console.log(info);
+          resolve(info);
       }
     });
 });
 
-// res.status(200).json({ status: "OK" });
+res.status(200).json({ status: "OK" });
 };
+
 
 export const config = {
   api: {
