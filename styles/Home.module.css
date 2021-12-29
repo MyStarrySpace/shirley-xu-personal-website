@@ -125,6 +125,17 @@
   color: #f7f7f3;
 }
 
+.aboutmebg {
+  min-height: 350px;
+  margin-bottom: -200px;
+  overflow: hidden;
+  display: block;
+  background-image: url("../images/shirley-xu-about-me-bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
 .contactbg {
   min-height: 350px;
   margin-bottom: -200px;
