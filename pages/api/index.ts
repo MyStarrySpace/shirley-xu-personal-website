@@ -1,52 +1,66 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-const nodemailer = require("nodemailer");
-require('dotenv').config();
-
 type ResponseData = {
   status: string
 }
 
-const contactEmail = nodemailer.createTransport({
+const nodemailer = require("nodemailer");
+require('dotenv').config();
+
+export default async (req: NextApiRequest, res: NextApiResponse<ResponseData>) => {
+
+const { firstName, lastName, email, message } = JSON.parse(req.body);
+
+const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_ADDRESS,
     pass: process.env.EMAIL_PASSWORD,
-  },
-});
-
-contactEmail.verify((error: Error) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Ready to Send");
   }
 });
 
-const handler = (req: NextApiRequest, res: NextApiResponse<ResponseData>) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const phonenumber = req.body.phonenumber;
-  const company = req.body.company;
-  const message = req.body.message; 
-  const mail = {
-    from: name,
-    to: "sternenraum@gmail.com",
-    subject: "Contact Form Submission",
-    html: `<p>Name: ${name}</p>
-           <p>Email: ${email}</p>
-           <p>Phone Number: ${phonenumber}</p>
-           <p>Company: ${company}</p>
-           <p>Message: ${message}</p>`,
-  };
-  contactEmail.sendMail(mail, (error: Error) => {
-    if (error) {
-      res.status(500).json({ status: error.message })
-    } else {
-      res.status(200).json({ status: "Message Sent" })
-    }
-  });
-}
+await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error: Error, success: any) {
+        if (error) {
+            console.log(error);
+            reject(error);
+        } else {
+            console.log("Server is ready to take our messages");
+            resolve(success);
+        }
+    });
+});
 
-export default handler
+const mailData = {
+    from: {
+        name: `${firstName} ${lastName}`,
+        address: "myEmail@gmail.com",
+    },
+    replyTo: email,
+    to: "recipient@gmail.com",
+    subject: `form message`,
+    text: message,
+    html: `${message}`,
+};
+
+await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(mailData, (error: Error, success: any) => {
+      if (error) {
+        return res.status(500).json({ status: error.message })
+      } else {
+        return res.status(200).json({ status: "Message Sent" })
+      }
+    });
+});
+
+// res.status(200).json({ status: "OK" });
+};
+
+export const config = {
+  api: {
+    externalResolver: true,
+  },
+}

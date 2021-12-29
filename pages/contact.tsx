@@ -127,7 +127,7 @@ const ContactMeForm: NextPage = () => {
 				    				<a href="http://github.com/MyStarrySpace" className={"text-decoration-none text-white"}>
 				    					<div className={["row"].join(' ')}>
 					    					<div className={["col-sm-12 col-lg-3 col-xl-2", styles.center].join(' ')}>
-						    					<Image src={iconGithub} alt="" width="100" height="100"/>
+						    					<Image src={iconGithub} alt="" width="80" height="80"/>
 						    				</div>
 						    				<div className={["col-sm-12 col-lg-9", styles.center].join(' ')}>
 						    					<div className={["row"].join(' ')}>
@@ -141,7 +141,7 @@ const ContactMeForm: NextPage = () => {
 				    				<a href="http://linkedin.com/in/MyStarrySpace" className={"text-decoration-none text-white"}>
 				    					<div className={["row"].join(' ')}>
 					    					<div className={["col-sm-12 col-lg-3 col-xl-2", styles.center].join(' ')}>
-						    					<Image src={iconLinkedIn} alt="" width="100" height="100"/>
+						    					<Image src={iconLinkedIn} alt="" width="80" height="80"/>
 						    				</div>
 						    				<div className={["col-sm-12 col-lg-9", styles.center].join(' ')}>
 						    					<div className={["row"].join(' ')}>
@@ -155,7 +155,7 @@ const ContactMeForm: NextPage = () => {
 				    				<a href="facebook.com/MyStarrySpace" className={"text-decoration-none text-white"}>
 				    					<div className={["row"].join(' ')}>
 					    					<div className={["col-sm-12 col-lg-3 col-xl-2", styles.center].join(' ')}>
-						    					<Image src={iconFacebook} alt="" width="100" height="100"/>
+						    					<Image src={iconFacebook} alt="" width="80" height="80"/>
 						    				</div>
 						    				<div className={["col-sm-12 col-lg-9", styles.center].join(' ')}>
 						    					<div className={["row"].join(' ')}>
