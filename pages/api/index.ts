@@ -24,10 +24,7 @@ contactEmail.verify((error: Error) => {
   }
 });
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
-) {
+const handler = (req: NextApiRequest, res: NextApiResponse<ResponseData>) => {
   const name = req.body.name;
   const email = req.body.email;
   const phonenumber = req.body.phonenumber;
@@ -45,10 +42,11 @@ export default function handler(
   };
   contactEmail.sendMail(mail, (error: Error) => {
     if (error) {
-      var errorstr = "ERROR: " + process.env.EMAIL_ADDRESS + "is the email address"
-      res.status(500).json({ status: errorstr })
+      res.status(500).json({ status: "Failed to send message" })
     } else {
       res.status(200).json({ status: "Message Sent" })
     }
   });
 }
+
+export default handler

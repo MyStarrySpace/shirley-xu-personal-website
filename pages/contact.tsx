@@ -73,7 +73,6 @@ const ContactMeForm: NextPage = () => {
     });
     setStatus("Submit");
     let result = await response.json();
-    console.log("Submitted")
     alert(result.status);
   };
   return (
