@@ -45,7 +45,8 @@ export default function handler(
   };
   contactEmail.sendMail(mail, (error: Error) => {
     if (error) {
-      res.status(500).json({ status: "ERROR" })
+      var errorstr = "ERROR: " + process.env.EMAIL_ADDRESS + "is the email address"
+      res.status(500).json({ status: errorstr })
     } else {
       res.status(200).json({ status: "Message Sent" })
     }
