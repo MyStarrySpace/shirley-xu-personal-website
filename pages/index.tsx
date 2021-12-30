@@ -110,9 +110,15 @@ const Services: NextPage = () => {
           <h2> What can I do for you? </h2>
         </div>
         <div className={["row g-4 my-4", styles.constraincenter].join(' ')}>
-          <ResponsiveCard {...contents0} />
-          <ResponsiveCard {...contents1} />
-          <ResponsiveCard {...contents2} />
+          <div className="col-sm-12 col-lg-4 mt-4">
+            <ResponsiveCard {...contents0} />
+          </div>
+          <div className="col-sm-12 col-lg-4 mt-4">
+            <ResponsiveCard {...contents1} />
+          </div>
+          <div className="col-sm-12 col-lg-4 mt-4">
+            <ResponsiveCard {...contents2} />
+          </div>
         </div>
       </div>
     </div>

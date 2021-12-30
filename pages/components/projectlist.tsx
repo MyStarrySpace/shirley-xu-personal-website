@@ -23,7 +23,9 @@ export default function ProjectList() {
             body: projectData.excerpt, 
             image: projectData.cover_image, index: index, delay: (index * 0.2)}
             return(
-                <ResponsiveCard {...contents} />
+                <div className="col-sm-12 col-lg-4 mt-4" key={contents.index}>
+                    <ResponsiveCard {...contents} />
+                </div>
             )
         })}
       </div>
