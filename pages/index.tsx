@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import ProjectList from './/components/projectlist'
+import ResponsiveCard from './/components/responsivecard'
 
 import Container from 'react-bootstrap/Container'
 import Link from 'next/link'
@@ -84,47 +85,8 @@ interface CardContents {
   title: string;
   body: string;
   image: any;
+  index: number;
   delay: number;
-}
-
-const ServiceCard: any = (contents: CardContents) => {
-  const [ref, inView] = useInView({ threshold: 0.2,})
-
-  const controls = useAnimation();
-
-  if (inView) {
-    controls.start('visible');
-  }
-  if (!inView) {
-    controls.start('hidden');
-  }
-
-  return (
-    
-      <div className="col-sm-12 col-lg-4 mt-4">
-        <motion.div initial="hidden" animate={controls} variants={{
-                hidden: {opacity: 0}, 
-                visible: {opacity: 1, transition: { duration: 0.5, when: "beforeChildren", delay: contents.delay}}
-              }}>
-          <div ref={ref} className={[styles.servicescard, 'card h-100'].join(' ')}>
-            <div className="row">
-              <div className={[styles.cardfill, 'col-xs-12 col-sm-4 col-lg-12'].join(' ')}>
-                <Image src={contents.image} alt={contents.title} className={styles.cardimg}/>
-              </div>
-              <div className={[styles.cardtext, 'col-xs-12 col-sm-8 col-lg-12'].join(' ')}>
-                <h5 className={[styles.cardtitle, 'card-title mt-4 mb-0 px-3'].join(' ')}>
-                {contents.title}
-                </h5>
-                <p className={['card-body px-4', styles.cardbody].join(' ')}>
-                {contents.body}
-                </p>
-              </div>
-            </div>
-          </div>
-          </motion.div> 
-      </div>
-    
-  )
 }
 
 const Services: NextPage = () => {
@@ -132,15 +94,15 @@ const Services: NextPage = () => {
   let contents0: CardContents = {title: "UI Design and Development", 
     body: "Are you looking for someone to help you design and implement your user interfaces? You've come to the right place! \
     Having studied user experience, data visualization, and human-computer interaction, \
-    I am experienced with creating delightful visual and functional experiences for users of all kinds.", image: imgWebDesign, delay: 0}
+    I am experienced with creating delightful visual and functional experiences for users of all kinds.", image: imgWebDesign, index: 0, delay: 0}
   let contents1: CardContents = {title: "Full-stack Development", 
     body: "Having graduated with a B.S. in Computer Science from the University of Massachusetts Amherst, \
     I have worked with both frontend and backend programming, including networking, design, and full-stack development. \
-    I have vast experience with the MERN stack, Typescript, and APIs, which I have also used in my personal website.", image: imgWebDevelopment, delay: 0.2}
+    I have vast experience with the MERN stack, Typescript, and APIs, which I have also used in my personal website.", image: imgWebDevelopment, index: 1, delay: 0.2}
   let contents2: CardContents = {title: "Illustration", 
     body: "I have been drawing for 7+ years and won the Gold Scholastic Art Award in 2016. I have a passion for art and illustration; in fact, \
     I was accepted into the Rhode Island School of Design, one of the most prestigious art schools. \
-    Even though I chose a different path, I still create digital art and have done various concept art pieces as well.", image: imgIllustration, delay: 0.4}
+    Even though I chose a different path, I still create digital art and have done various concept art pieces as well.", image: imgIllustration, index: 2, delay: 0.4}
   return (
     <div className={styles.purplebg}> 
       <div className={["container-fluid p-5"].join(' ')}>
@@ -148,9 +110,9 @@ const Services: NextPage = () => {
           <h2> What can I do for you? </h2>
         </div>
         <div className={["row g-4 my-4", styles.constraincenter].join(' ')}>
-          <ServiceCard {...contents0} />
-          <ServiceCard {...contents1} />
-          <ServiceCard {...contents2} />
+          <ResponsiveCard {...contents0} />
+          <ResponsiveCard {...contents1} />
+          <ResponsiveCard {...contents2} />
         </div>
       </div>
     </div>
@@ -165,11 +127,11 @@ const Projects: NextPage = () => {
           My projects
         </h1>
         <ProjectList />
-        <div className="row">
+        {/* <div className="row">
           <a href="#" className={"text-decoration-none p-4"}>
             <button className={["btn p-3 mt-1", styles.contactmebtn, styles.fillwidth].join(' ')}>View more projects</button>
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   )
