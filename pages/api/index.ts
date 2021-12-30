@@ -10,7 +10,9 @@ type ResponseData = {
 }
 
 export default async (req:NextApiRequest, res:NextApiResponse<ResponseData>) => {
-  const project_files = fs.readdirSync(path.join('public/projects'))
+  const dirRelativeToPublicFolder = 'projects'
+  const dir = path.resolve('./public', dirRelativeToPublicFolder);
+  const project_files = fs.readdirSync(dir)
 
   const project_slugs = project_files.map(filename => {
     const slug = filename.replace('.md', '')
