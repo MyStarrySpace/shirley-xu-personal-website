@@ -1,7 +1,8 @@
-import { ReactChild, ReactFragment, ReactPortal } from 'react';
+import { ReactChild, ReactFragment, ReactPortal } from 'react'
 import styles from '../../styles/ProjectList.module.css'
 import ResponsiveCard from './responsivecard'
-import useSWR from 'swr';
+import useSWR from 'swr'
+import path from 'path'
 
 interface CardContents {
     title: string;
