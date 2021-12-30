@@ -1,6 +1,15 @@
 import { ReactChild, ReactFragment, ReactPortal } from 'react';
 import styles from '../../styles/ProjectList.module.css'
+import ResponsiveCard from './responsivecard'
 import useSWR from 'swr';
+
+interface CardContents {
+    title: string;
+    body: string;
+    image: any;
+    index: number;
+    delay: number;
+}
 
 export default function ProjectList() {
     const fetcher = (url: string) => fetch(url).then((res) => res.json());
@@ -8,21 +17,13 @@ export default function ProjectList() {
     
     return (
       <div className={["row g-4 my-4", styles.center].join(' ')}>
-        {data && data.projects.map((project: { data: { data: any; }; }) => {
+        {data && data.projects.map((project: { data: { data: any; }; }, index: number) => {
             const projectData = project.data.data
+            const contents: CardContents = {title: projectData.title, 
+            body: projectData.excerpt, 
+            image: projectData.cover_image, index: index, delay: (index * 0.2)}
             return(
-                <div key={projectData.title} className={["col-sm-12 col-lg-4 p-4", styles.projectcard].join(' ')}>
-                    <div className={"row"}>
-                        <div className={"col-sm-3 col-lg-12"}>
-                            <img src={projectData.cover_image} alt={projectData.title} width="300px" height="300px"></img>
-                        </div>
-                        <div className={"col-sm-9 col-lg-12"}>
-                            <h2>{projectData.title}</h2>
-                            <p>{projectData.date}</p>
-                            <p>{projectData.excerpt}</p>
-                        </div>
-                    </div>
-                </div>
+                <ResponsiveCard {...contents} />
             )
         })}
       </div>
