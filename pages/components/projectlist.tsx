@@ -10,6 +10,7 @@ interface CardContents {
     image: any;
     index: number;
     delay: number;
+    projectName?: string;
 }
 
 export default function ProjectList() {
@@ -22,7 +23,8 @@ export default function ProjectList() {
             const projectData = project.data.data
             const contents: CardContents = {title: projectData.title, 
             body: projectData.excerpt, 
-            image: projectData.cover_image, index: index, delay: (index * 0.2)}
+            image: projectData.cover_image, index: index, delay: 0.2,
+            projectName: projectData.project_name}
             return(
                 <div className="col-sm-12 col-lg-4 mt-4" key={contents.index}>
                     <ResponsiveCard {...contents} />

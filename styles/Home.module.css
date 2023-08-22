@@ -112,6 +112,10 @@
   display: block;
 }
 
+.aboutmebtn:hover {
+  background-color: #604d64 !important;
+}
+
 .contactmebtn {
   background-color: #d7a299 !important;
   color: #f7f7f3 !important;
@@ -119,6 +123,29 @@
   width: 100%;
   display: block;
 }
+
+.contactmebtn:hover {
+  background-color: #db7792 !important;
+}
+
+.readmorebtn {
+  background-color: #d7a299 !important;
+  border: none;
+  color: #f7f7f3 !important;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.readmorebtn:hover {
+  background-color: #db7792 !important;
+}
+
 
 .purplebg {
   background-color: #604d64;

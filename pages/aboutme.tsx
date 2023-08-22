@@ -80,21 +80,25 @@ const AboutMeIntro: NextPage = () => {
 					    	<div className={["col-sm-12 col-lg-7 p-5", styles.primary].join(' ')}>
 					    		<div className="row mb-3">
 							   		<p>
-						        	My name is Shirley Xu, and I love sharing my creativity with the world by building products that are well-designed and user-friendly. 
-						        	I&apos;ve loved programming and being creative ever since I was a kid; at the age of 8, I discovered the Scratch programming language, and that&apos;s where it all began.
-						        	I made small games and animations, combining my knowledge of programming and art to make my creative inklings into reality. Fifteen years later, I am still working on making ideas come to life.
-						        	I love to learn about nearly everything, as I notice how design and patterns factor into many aspects of everyday life and the systems that fuel it.
-						       	</p>
-						       	<p>
-						        	I graduated with my Bachelor&apos;s in Computer Science in 2020 with a minor in Linguistics. Towards the end of my college career, however, as COVID became more pervasive
-						        	throughout various areas of my life, I also took an interest in the life sciences; through my own initiative, I took courses in organic chemistry and molecular biology
-						        	with hope of expanding my knowledge of myself and the world around me. I&apos;m a self-taught artist as well, creating concept art and illustration.
-						       	</p>
-						       	<p>
-						       		I am very quick to adapt to new technologies; at my internship at Dell EMC, I was able to commit code for my first ticket to improve the Escalation Engineering tool suite within my first week. 
-						       		It really warmed my heart when my supervisor told me that they are still using the tool I made months later! 
-						       		I take pride in being a quick learner and adapting well to new environments. After all, life changes quickly, and it is important to always be improving.
-						       	</p>
+									   I am Shirley Xu, a passionate creator, software engineer, and bioinformatician with a flair for blending technology, design, and the life sciences. My journey into the fascinating world of programming began at the age of 8 when I discovered the Scratch programming language. From creating small games to intricate animations, I transformed my creative inklings into tangible realities, igniting a lifelong passion for bringing ideas to life.
+									</p>
+									<p>
+									<b>Educational Background: </b>
+									I hold a Bachelor's in Computer Science with a minor in Linguistics from the University of Massachusetts, where I graduated in 2020. As the COVID pandemic shaped the world, I sought to expand my horizons, delving into organic chemistry and molecular biology. My curiosity led me to pursue a master's in bioinformatics, which I earned from Brandeis University in 2023. Additionally, I am a self-taught artist with skills in concept art and illustration—a passion that earned me acceptance into the prestigious Rhode Island School of Design, though I chose to pursue computer science.
+									</p>
+									<p>
+									<b>Professional Experience: </b>
+									My professional journey includes an impactful internship at Dell EMC, where I quickly adapted to new technologies and contributed code within my first week. The Escalation Engineering tool suite I improved is still in use, a testament to the quality and enduring value of my work. My supervisor's commendation warmed my heart and reinforced my commitment to excellence.
+									I pride myself on being a quick learner, agile in adapting to new environments, and relentless in my pursuit of growth. Life's ever-changing nature has taught me the importance of continuous improvement—a principle that guides my professional endeavors.
+									</p>
+									<p>
+									<b>Creative Insight: </b>
+									My love for learning extends beyond technology, touching various aspects of everyday life, from design patterns to systemic intricacies. I see the world through a lens of creativity, where art, science, and technology converge to create meaningful and user-friendly products.
+									</p>
+									<p>
+									<b>Conclusion: </b> 
+									With a unique blend of technical expertise, artistic talent, and interdisciplinary curiosity, I am eager to contribute my skills to a dynamic team and take on new challenges. My background in both computer science and life sciences, coupled with my hands-on experience and love for creativity, positions me as a versatile and valuable asset. I look forward to the opportunity to continue building well-designed, innovative solutions that make a lasting impact.
+						       		</p>
 					    		</div>
 					    		<div className="row mb-3 p-0">
 					    			<div className="col px-3">

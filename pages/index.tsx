@@ -130,7 +130,7 @@ const Projects: NextPage = () => {
     <div className={styles.projects}>
       <div className={["container-fluid p-5"].join(' ')}>
         <h1 className={[styles.projectstitle, styles.title, "py-4"].join(' ')}>
-          My projects
+          My Work
         </h1>
         <ProjectList />
         {/* <div className="row">

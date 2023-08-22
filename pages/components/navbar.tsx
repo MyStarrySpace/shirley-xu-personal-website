@@ -83,6 +83,11 @@ const CollapsedDropdown: NextPage = () => {
                 <a className={[styles.link].join(' ')}>Contact Me</a>
               </Link> 
             </li>
+            <li className="nav-item px-2">
+              <Link href="/projects">
+                <a className={[styles.link].join(' ')}>Projects</a>
+              </Link> 
+            </li>
             {/*<ServicesDropdown />*/}
           </ul>
         </div>
