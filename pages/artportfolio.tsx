@@ -18,11 +18,24 @@ const ArtPortfolio: NextPage = () => {
 
 	const [selectedImage, setSelectedImage] = useState<number | null>(null);
 	const [lightboxIsOpen, setLightboxIsOpen] = useState(false);
+	const [direction, setDirection] = useState(0);
 
 	const fadeVariant = {
 		initial: { opacity: 0 },
 		enter: { opacity: 1 },
 	};
+
+	const slideFadeVariant = {
+		exit: (direction: number) => ({
+			opacity: 0,
+			x: direction > 0 ? 100 : -100,
+		}),
+		enter: {
+			opacity: 1,
+			x: 0,
+		},
+	};
+
 
 	const openLightbox = (index: number) => {
 		setSelectedImage(index);
@@ -37,6 +50,7 @@ const ArtPortfolio: NextPage = () => {
 	const goNext = (e?: React.MouseEvent) => {
 		e?.stopPropagation();
 		if (selectedImage !== null && selectedImage < images.length - 1) {
+			setDirection(1); // Set direction for slide to the right
 			setSelectedImage(selectedImage + 1);
 		}
 	};
@@ -44,9 +58,11 @@ const ArtPortfolio: NextPage = () => {
 	const goBack = (e?: React.MouseEvent) => {
 		e?.stopPropagation();
 		if (selectedImage !== null && selectedImage > 0) {
+			setDirection(-1); // Set direction for slide to the left
 			setSelectedImage(selectedImage - 1);
 		}
 	};
+
 
 	// Keyboard event listener for arrow keys
 	useEffect(() => {
@@ -67,22 +83,22 @@ const ArtPortfolio: NextPage = () => {
 			<div className={styles.imageGrid}>
 				{images.map((image, index) => (
 					<motion.div
-					key={index}
-					className={styles.imageCell}
-					onClick={() => openLightbox(index)}
-					variants={fadeVariant}
-					initial="initial"
-					animate="enter"
-					transition={{ duration: 0.5, delay: index * 0.1 }}
-				>
-					<img
-						src={`/images/art/${image}`}
-						alt={`Art ${index}`}
-						className={`${styles.clickableImage}`}
+						key={index}
+						className={styles.imageCell}
 						onClick={() => openLightbox(index)}
-					/>
+						variants={fadeVariant}
+						initial="initial"
+						animate="enter"
+						transition={{ duration: 0.5, delay: index * 0.1 }}
+					>
+						<img
+							src={`/images/art/${image}`}
+							alt={`Art ${index}`}
+							className={`${styles.clickableImage}`}
+							onClick={() => openLightbox(index)}
+						/>
 
-				</motion.div>
+					</motion.div>
 				))}
 			</div>
 			<AnimatePresence exitBeforeEnter>
@@ -98,7 +114,17 @@ const ArtPortfolio: NextPage = () => {
 								←
 							</motion.button>
 						)}
-						<img src={`/images/art/${images[selectedImage]}`} alt={`Art ${selectedImage}`} className={styles.lightboxImage}/>
+						<motion.img
+							key={selectedImage} 
+							variants={slideFadeVariant}
+							initial="exit"
+							animate="enter"
+							exit="exit"
+							custom={direction} 
+							src={`/images/art/${images[selectedImage]}`} alt={`Art ${selectedImage}`} className={styles.lightboxImage}
+						>
+						</motion.img>
+
 						{selectedImage < images.length - 1 && (
 							<motion.button
 								className={`${styles.navigationButton} ${styles.next}`}
