@@ -94,7 +94,7 @@
   border-radius: 50%;
   padding-left: 1.5rem;
   position: relative;
-  border: 3px !important; 
+  border: 5px !important; 
   border-style: solid !important ;
   align-self: right;
 }
@@ -296,6 +296,62 @@
   justify-content: center;
   z-index: 1000;
 }
+
+.lightboxContainer {
+  position: relative; 
+}
+
+.navigationButton {
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 5;
+  margin: 0 100px;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.navigationButton.back {
+  left: 0;
+  animation-name: arrowAnimationReverse;
+}
+
+.navigationButton.next {
+  right: 0;
+  animation-name: arrowAnimation;
+}
+
+@keyframes arrowAnimation {
+  0%, 100% {
+    transform: translateY(-50%) translateX(0); /* Initial position */
+  }
+  25% {
+    transform: translateY(-50%) translateX(10px); /* Move towards the center */
+  }
+  50% {
+    transform: translateY(-50%) translateX(0); /* Move back */
+  }
+}
+
+@keyframes arrowAnimationReverse {
+  0%, 100% {
+    transform: translateY(-50%) translateX(0); /* Initial position */
+  }
+  25% {
+    transform: translateY(-50%) translateX(-10px); /* Move towards the center */
+  }
+  50% {
+    transform: translateY(-50%) translateX(0); /* Move back */
+  }
+}
+
+
 
 .overlay {
   background: rgba(0, 0, 0, 0.5);
