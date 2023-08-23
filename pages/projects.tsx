@@ -8,11 +8,6 @@ import Navbar from './components/navbar'
 import Link from 'next/link'
 import { motion, useAnimation } from "framer-motion"
 
-import iconEducation from '../public/images/iconEducation.svg'
-import iconExperience from '../public/images/iconExperience.svg'
-import iconGlobe from '../public/images/iconGlobe.svg'
-import iconInterests from '../public/images/iconInterests.svg'
-
 import ProjectList from './components/projectlist'
 
 const Projects: NextPage = () => {

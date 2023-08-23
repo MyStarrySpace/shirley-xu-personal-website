@@ -44,8 +44,9 @@ const Intro: NextPage = () => {
                   </div>
                   <div className="bg-light p-5">
                     <p className="my-0 pb-4">
-                      Hello! I am a full-stack web developer and designer proficient in React, Next.js, Express.js, MongoDB, Node.js, and Typescript. 
-                      I also have plenty of experience with web design and illustration. My keen artistic eye allows me to design web pages that flow well and are friendly to users.
+                    I am Shirley Xu, a software engineer, bioinformatician, and self-taught artist with a passion for blending creativity, technology, and design. 
+                    Whether I'm designing characters for gaming projects, analyzing data with bioinformatics tools or building responsive web applications, I approach every challenge with adaptability, innovation, and a commitment to excellence. 
+                    My diverse educational background, hands-on experience, and artistic abilities fuel my desire to create meaningful and well-designed products that resonate with users.
                     </p>
                     <motion.div className="gx-5" initial="initial" animate="animate" transition={{ delay: 0.5 }} variants={{ 
                       initial: { opacity: 0}, 
