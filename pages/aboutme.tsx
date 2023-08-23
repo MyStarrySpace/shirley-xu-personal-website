@@ -16,7 +16,7 @@ import iconInterests from '../public/images/iconInterests.svg'
 const AboutMeIntro: NextPage = () => {
 	return (
 		<>
-		 	<div className={['container-sm mt-5', styles.centerh].join(' ')}>
+		 	<div className={['container-sm mt-4', styles.centerh].join(' ')}>
 		  	<div className={['row justify-content-md-center mb-5'].join(' ')}>
 		  		<div className={'col-1'}></div>
 			 		<div className={['col-10'].join(' ')}> 
@@ -135,9 +135,9 @@ const AboutMe: NextPage = () => {
 									<h1>
 										About Me
 									</h1>
-									<p>
+									<div>
 										Here is some information about who I am!
-									</p>
+									</div>
 								</motion.div>
 							</div>
 						<div className="col-sm-0 col-lg-5" />

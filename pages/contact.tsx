@@ -31,9 +31,9 @@ const ContactMe: NextPage = () => {
 									<h1>
 										Contact Me
 									</h1>
-									<p>
+									<div>
 										Tell me about your company or project, or just ask me anything! I am open for inquiries.
-									</p>
+									</div>
 								</motion.div>
 							</div>
 						<div className="col-sm-0 col-lg-5" />

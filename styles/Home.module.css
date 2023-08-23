@@ -157,10 +157,11 @@
   margin-bottom: -200px;
   overflow: hidden;
   display: block;
-  background-image: url("../public/images/shirley-xu-about-me-bg.jpg");
+  background-image: url("../public/images/AbstractGradientBackground.png");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  color: #433945;
 }
 
 .aboutmebg h1 {
@@ -172,6 +173,11 @@
   margin-bottom: -200px;
   overflow: hidden;
   display: block;
+  background-image: url("../public/images/AbstractPaintBackground.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: #f7f7f3;
 }
 
 .contactbg h1 {
