@@ -80,16 +80,16 @@ const AboutMeIntro: NextPage = () => {
 					    	<div className={["col-sm-12 col-lg-7 p-5", styles.primary].join(' ')}>
 					    		<div className="row mb-3">
 							   		<p>
-									   I am Shirley Xu, a passionate creator, software engineer, and bioinformatician with a flair for blending technology, design, and the life sciences. My journey into the fascinating world of programming began at the age of 8 when I discovered the Scratch programming language. From creating small games to intricate animations, I transformed my creative inklings into tangible realities, igniting a lifelong passion for bringing ideas to life.
+									   Welcome! I am Shirley Xu, a passionate creator, software engineer, and bioinformatician with a flair for blending technology, design, and the life sciences. My journey into the fascinating world of programming began at the age of 8 when I discovered the Scratch programming language. From creating small games to intricate animations, I transformed my creative inklings into tangible realities, igniting a lifelong passion for bringing ideas to life.
 									</p>
 									<p>
 									<b>Educational Background: </b>
-									I hold a Bachelor's in Computer Science with a minor in Linguistics from the University of Massachusetts, where I graduated in 2020. As the COVID pandemic shaped the world, I sought to expand my horizons, delving into organic chemistry and molecular biology. My curiosity led me to pursue a master's in bioinformatics, which I earned from Brandeis University in 2023. Additionally, I am a self-taught artist with skills in concept art and illustration—a passion that earned me acceptance into the prestigious Rhode Island School of Design, though I chose to pursue computer science.
+									I hold a Bachelor&apos;s in Computer Science with a minor in Linguistics from the University of Massachusetts, where I graduated in 2020. As the COVID pandemic shaped the world, I sought to expand my horizons, delving into organic chemistry and molecular biology. My curiosity led me to pursue a master&apos;s in bioinformatics, which I earned from Brandeis University in 2023. Additionally, I am a self-taught artist with skills in concept art and illustration—a passion that earned me acceptance into the prestigious Rhode Island School of Design, though I chose to pursue computer science.
 									</p>
 									<p>
 									<b>Professional Experience: </b>
-									My professional journey includes an impactful internship at Dell EMC, where I quickly adapted to new technologies and contributed code within my first week. The Escalation Engineering tool suite I improved is still in use, a testament to the quality and enduring value of my work. My supervisor's commendation warmed my heart and reinforced my commitment to excellence.
-									I pride myself on being a quick learner, agile in adapting to new environments, and relentless in my pursuit of growth. Life's ever-changing nature has taught me the importance of continuous improvement—a principle that guides my professional endeavors.
+									My professional journey includes an impactful internship at Dell EMC, where I quickly adapted to new technologies and contributed code within my first week. The Escalation Engineering tool suite I improved is still in use, a testament to the quality and enduring value of my work. My supervisor&apos;s commendation warmed my heart and reinforced my commitment to excellence.
+									I pride myself on being a quick learner, agile in adapting to new environments, and relentless in my pursuit of growth. Life&apos;s ever-changing nature has taught me the importance of continuous improvement—a principle that guides my professional endeavors.
 									</p>
 									<p>
 									<b>Creative Insight: </b>

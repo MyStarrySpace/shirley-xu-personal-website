@@ -81,7 +81,7 @@ const ArtPortfolio: NextPage = () => {
 	return (
 		<div>
 			<div className={styles.imageGrid}>
-				{images.map((image, index) => (
+				{images.map((image, index: number) => (
 					<motion.div
 						key={index}
 						className={styles.imageCell}
