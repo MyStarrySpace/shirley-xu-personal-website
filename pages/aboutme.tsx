@@ -46,7 +46,7 @@ const AboutMeIntro: NextPage = () => {
 						    				</div>
 						    				<div className={["col-sm-12 col-lg-9", styles.center].join(' ')}>
 						    					<div className={["row"].join(' ')}>
-						    						1.5 years of programming experience
+						    						3 years of programming experience
 						    					</div>
 						    				</div>	
 						    			</div>
