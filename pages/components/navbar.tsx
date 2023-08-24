@@ -1,114 +1,76 @@
 import type { NextPage } from 'next'
 import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
+import { useState } from 'react';
 // import React, { Component, useState } from 'react';
-import { motion, useAnimation } from "framer-motion"
-
-// const ServicesDropdown: NextPage = () => {
-
-//   const [isOpen, setIsOpen] = useState(0);
-//   const dropDownClass = isOpen ? styles.dropdownmenuopen : styles.dropdownmenuclosed;
-//   const controls = useAnimation();
-
-
-//   return (
-//     <li className="nav-item px-2">
-//       <div className={["dropdown"].join(' ')} onClick={() => 
-//           {setIsOpen(! isOpen)}
-//         }>
-//         <a className={["nav-link dropdown-toggle", styles.link].join(' ') } href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">My Services</a>
-//         <motion.div initial="initial" animate='animate' transition={{ delay: 0.2 }} variants={{ 
-//                     initial: { opacity: 0, "maxHeight": 0}, 
-//                     animate: { opacity: 1, "maxHeight": 280}, 
-//                   }}>
-//             <div className={[styles.dropdownmenu, dropDownClass].join(' ')} aria-labelledby="dropdownMenuButton">
-//               <div className="nav-item px-2">
-//                 <Link href="/">
-//                   <a className={[styles.link].join(' ')}>UI Design and Development</a>
-//                 </Link> 
-//               </div>
-//               <div className="nav-item px-2">
-//                 <Link href="/">
-//                   <a className={[styles.link].join(' ')}>Full-Stack Development</a>
-//                 </Link> 
-//               </div>
-//               <div className="nav-item px-2">
-//                 <Link href="/">
-//                   <a className={[styles.link].join(' ')}>Illustration</a>
-//                 </Link> 
-//               </div>
-//             </div>
-//           </motion.div>
-//       </div>
-//     </li>
-//   );
-
-// }
-
-const CollapsedDropdown: NextPage = () => {
-
-  // var state: any = {
-  //   isOpen: false
-  // };
-
-  // var toggleOpen: any = () => useState({ isOpen: state.isOpen });
-
-  // const menuClass = state.isOpen ? styles.menuopen : styles.menuclosed;
-  return (
-    <>
-      <div>
-        <div>
-          <a className={["icon", styles.navexpandicon].join(' ')} 
-          // onClick={this.toggleOpen}
-          >
-            <i className="fa fa-bars"> </i>
-          </a>
-        </div>
-        <div 
-        // className={menuClass} 
-        id="navbarsExample07XL">
-          <ul className={["navbar-nav", styles.navbarinline].join(" ")}>
-            <li className="nav-item px-2">
-              <Link href="/">
-                <a className={[styles.link].join(' ')}>Home</a>
-              </Link>   
-            </li>
-            <li className="nav-item px-2">
-              <Link href="/aboutme">
-                <a className={[styles.link].join(' ')}>About Me</a>
-              </Link> 
-            </li>
-            <li className="nav-item px-2">
-              <Link href="/contact">
-                <a className={[styles.link].join(' ')}>Contact Me</a>
-              </Link> 
-            </li>
-            <li className="nav-item px-2">
-              <Link href="/projects">
-                <a className={[styles.link].join(' ')}>Projects</a>
-              </Link> 
-            </li>
-            <li className="nav-item px-2">
-              <Link href="/artportfolio">
-                <a className={[styles.link].join(' ')}>Art Portfolio</a>
-              </Link> 
-            </li>
-            {/*<ServicesDropdown />*/}
-          </ul>
-        </div>
-      </div>
-    </>
-  );
-}
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar: NextPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav className={["navbar navbar-expand px-5 py-3", styles.navbar].join(' ')}>
+    <nav className={`navbar navbar-expand-lg px-5 py-3 ${styles.navbar}`}>
       <div className="container-fluid">
-        <CollapsedDropdown />
+        <a className="navbar-brand" href="/">
+          
+        </a> {/* TODO: Add logo */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={toggleMenu}
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className={["navbar-toggler-icon", styles.navbarTogglerIcon].join(' ')}></span>
+        </button>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className={`collapse navbar-collapse show`}
+              id="navbarNav"
+            >
+              <ul className={[`navbar-nav`, styles.navbarinline].join(' ')}>
+                <li className="nav-item px-2">
+                  <Link href="/">
+                    <a className={styles.link}>Home</a>
+                  </Link>
+                </li>
+                <li className="nav-item px-2">
+                  <Link href="/aboutme">
+                    <a className={styles.link}>About Me</a>
+                  </Link>
+                </li>
+                <li className="nav-item px-2">
+                  <Link href="/contact">
+                    <a className={styles.link}>Contact Me</a>
+                  </Link>
+                </li>
+                <li className="nav-item px-2">
+                  <Link href="/projects">
+                    <a className={styles.link}>Projects</a>
+                  </Link>
+                </li>
+                <li className="nav-item px-2">
+                  <Link href="/artportfolio">
+                    <a className={styles.link}>Art Portfolio</a>
+                  </Link>
+                </li>
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
