@@ -2,6 +2,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #db7792 !important;
+}
+
+.navbar a:visited {
+    color: #f7f7f3;
+}
+
+.navbar .link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
 }
 
 .navbar .link.icon {
@@ -19,7 +30,6 @@
 
 .menuToggle {
     display: none;
-    /* Hide by default */
     cursor: pointer;
 }
 
@@ -31,24 +41,29 @@
     /* Styles for when the menu is open */
 }
 
-/* Media query to show hamburger menu on smaller screens */
-@media screen and (max-width: 768px) {
+.navbarTogglerIcon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+@media screen and (max-width: 996px) {
+    .navbarinline {
+        flex-direction: column !important;
+    }
+
+    .navToggler {
+        display: block;
+    }
+    
     .menuToggle {
         display: block;
     }
 
     .menu {
         display: none;
-        /* Hide by default on small screens */
     }
 
     .open {
         display: block;
-        /* Show when menu is open */
     }
 }
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
-  

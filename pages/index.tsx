@@ -18,69 +18,66 @@ import Portrait from '../public/images/shirley-portrait.jpg'
 
 const Intro: NextPage = () => {
   return (
-    <div>
-      <div className={[styles.introbg].join(' ')}>
-        <div className={"container-fluid"}>
-          <div className={["row justify-content-md-center"].join(' ')}>
-            <div className={["col-sm-12 col-lg-8", styles.center].join(' ')}>  
-              <motion.div initial="initial" animate="animate" transition={{ delay: 0.2 }} variants={{ 
-                  initial: { opacity: 0, y: -300}, 
-                  animate: { opacity: 1, y: 0}, 
-                }}>
-                <div className={[styles.focusbox, "col border rounded mb-4"].join(' ')}>
-                  <div className={["p-5", styles.primary].join(' ')}>
-                    <div className="row">
-                      <div className="col-2"></div>
-                      <div className={["col-4", styles.introtitle].join(' ')}>
-                        Hello! My name is
-                        <h1 className={["my-0"].join(' ')}>Shirley Xu</h1>
-                      </div>
-                      <div className={["col-3", styles.portraitdiv].join(' ')}>
-                        <Image src={Portrait} alt={"Portrait of Shirley Xu"} className={[styles.portrait].join(' ')} width="130" height="130"/>
-                      </div>
-                      
-                      <div className="col-3"></div>
+    <div className={styles.introbg}>
+      <div className="container-fluid">
+        <div className="row justify-content-md-center">
+          <div className={`col-sm-12 col-lg-8 ${styles.center}`}>  
+            <motion.div initial="initial" animate="animate" transition={{ delay: 0.2 }} variants={{ 
+                initial: { opacity: 0, y: -300}, 
+                animate: { opacity: 1, y: 0}, 
+              }}>
+              <div className={`${styles.focusbox} col border rounded mb-4`}>
+                <div className={`p-5 ${styles.primary}`}>
+                  <div className={`row ${styles.introsection}`}>
+                    <div className="col-2"></div>
+                    <div className={`col-4 ${styles.introtitle}`}>
+                      Hello! My name is
+                      <h1 className="my-0">Shirley Xu</h1>
                     </div>
-                  </div>
-                  <div className="bg-light p-5">
-                    <p className="my-0 pb-4">
-                    I am Shirley Xu, a software engineer, bioinformatician, and self-taught artist with a passion for blending creativity, technology, and design. 
-                    Whether I&apos;m designing characters for gaming projects, analyzing data with bioinformatics tools or building responsive web applications, I approach every challenge with adaptability, innovation, and a commitment to excellence. 
-                    My diverse educational background, hands-on experience, and artistic abilities fuel my desire to create meaningful and well-designed products that resonate with users.
-                    </p>
-                    <motion.div className="gx-5" initial="initial" animate="animate" transition={{ delay: 0.5 }} variants={{ 
-                      initial: { opacity: 0}, 
-                      animate: { opacity: 1}, 
-                    }}>
-                      <div className="row">
-                        <div className="col-sm-0 col-lg-3"></div>
-                        <div className="col-sm-6 col-lg-3">
-                          <Link href="/aboutme">
-                            <button className={["btn p-2", styles.aboutmebtn].join(' ')}>
-                                <a className={["link", styles.link].join(' ')}>About Me</a>
-                            </button>
-                          </Link> 
-                        </div>
-                        <div className="col-sm-6 col-lg-3">
-                          <Link href="/contact">
-                             <button className={["btn p-2", styles.contactmebtn].join(' ')}>
-                                 <a className={["link", styles.link].join(' ')}>Contact Me</a>
-                             </button>
-                           </Link>
-                        </div> 
-                        <div className="col-sm-0 col-lg-3"></div>
-                      </div>
-                    </motion.div>
+                    <div className={["col-3", styles.portraitdiv].join(' ')}>
+                      <Image src={Portrait} alt={"Portrait of Shirley Xu"} className={styles.portrait} width="150" height="150"/>
+                    </div>
+                    <div className="col-3"></div>
                   </div>
                 </div>
-              </motion.div>
-            </div>
+                <div className="bg-light p-5">
+                  <p className="my-0 pb-4">
+                  I am Shirley Xu, a software engineer, bioinformatician, and self-taught artist with a passion for blending creativity, technology, and design. 
+                  Whether I&apos;m designing characters for gaming projects, analyzing data with bioinformatics tools or building responsive web applications, I approach every challenge with adaptability, innovation, and a commitment to excellence. 
+                  My diverse educational background, hands-on experience, and artistic abilities fuel my desire to create meaningful and well-designed products that resonate with users.
+                  </p>
+                  <motion.div className="gx-5" initial="initial" animate="animate" transition={{ delay: 0.5 }} variants={{ 
+                    initial: { opacity: 0}, 
+                    animate: { opacity: 1}, 
+                  }}>
+                    <div className="row">
+                      <div className="col-sm-0 col-lg-3"></div>
+                      <div className="col-sm-6 col-lg-3">
+                        <Link href="/aboutme">
+                          <button className={`btn p-2 ${styles.aboutmebtn}`}>
+                              <a className={`link ${styles.link}`}>About Me</a>
+                          </button>
+                        </Link> 
+                      </div>
+                      <div className="col-sm-6 col-lg-3">
+                        <Link href="/contact">
+                          <button className={`btn p-2 ${styles.contactmebtn}`}>
+                              <a className={`link ${styles.link}`}>Contact Me</a>
+                          </button>
+                        </Link>
+                      </div> 
+                      <div className="col-sm-0 col-lg-3"></div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 interface CardContents {
   title: string;

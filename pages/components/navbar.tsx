@@ -1,67 +1,61 @@
 import type { NextPage } from 'next'
 import styles from '../../styles/Home.module.css'
+import navstyles from '../../styles/NavBar.module.css'
 import Link from 'next/link'
 import { useState } from 'react';
 // import React, { Component, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar: NextPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className={`navbar navbar-expand-lg px-5 py-3 ${styles.navbar}`}>
+    <nav className={`navbar navbar-expand-lg px-5 py-3 ${navstyles.navbar}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          
-        </a> {/* TODO: Add logo */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={toggleMenu}
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className={["navbar-toggler-icon", styles.navbarTogglerIcon].join(' ')}></span>
+        <div className={`navbar-brand ${navstyles.navbarBrand}`}>
+          {/* Add your logo or branding here if needed */}
+        </div>
+        <button className={`navbar-toggler ${navstyles.navToggler}`} type="button" onClick={toggleMenu}>
+          <span className={`navbar-toggler-icon ${navstyles.navbarTogglerIcon}`}></span>
         </button>
         <AnimatePresence>
-          {isOpen && (
+          {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className={`collapse navbar-collapse show`}
+              className={`navbar-collapse show ${navstyles.navbarinline}`}
               id="navbarNav"
             >
-              <ul className={[`navbar-nav`, styles.navbarinline].join(' ')}>
-                <li className="nav-item px-2">
+              <ul className="navbar-nav">
+                <li className={`nav-item px-2 ${navstyles.navItem}`}>
                   <Link href="/">
-                    <a className={styles.link}>Home</a>
+                    <a className={navstyles.link}>Home</a>
                   </Link>
                 </li>
-                <li className="nav-item px-2">
+                <li className={`nav-item px-2 ${navstyles.navItem}`}>
                   <Link href="/aboutme">
-                    <a className={styles.link}>About Me</a>
+                    <a className={navstyles.link}>About Me</a>
                   </Link>
                 </li>
-                <li className="nav-item px-2">
+                <li className={`nav-item px-2 ${navstyles.navItem}`}>
                   <Link href="/contact">
-                    <a className={styles.link}>Contact Me</a>
+                    <a className={navstyles.link}>Contact Me</a>
                   </Link>
                 </li>
-                <li className="nav-item px-2">
+                <li className={`nav-item px-2 ${navstyles.navItem}`}>
                   <Link href="/projects">
-                    <a className={styles.link}>Projects</a>
+                    <a className={navstyles.link}>Projects</a>
                   </Link>
                 </li>
-                <li className="nav-item px-2">
+                <li className={`nav-item px-2 ${navstyles.navItem}`}>
                   <Link href="/artportfolio">
-                    <a className={styles.link}>Art Portfolio</a>
+                    <a className={navstyles.link}>Art Portfolio</a>
                   </Link>
                 </li>
               </ul>

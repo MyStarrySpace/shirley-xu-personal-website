@@ -16,20 +16,6 @@
   color: #f7f7f3;
 }
 
-.navbar {
-  background-color: #db7792 !important;
-}
-
-.navbar a:visited {
-  color: #f7f7f3;
-}
-
-.navbar .link {
-  display: block;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-}
-
 .dropdownmenu {
   background-color: #db7792 !important;
   color: #f7f7f3;
@@ -39,7 +25,7 @@
 }
 
 .navexpandicon {
-  display : flex;
+  display: flex;
   vertical-align: top;
   text-decoration: none;
   color: #ffffff;
@@ -57,15 +43,15 @@
   color: #f7f7f3;
   text-decoration: none;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-    -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
 .link:hover {
   color: #344b67;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
 .focusbox {
@@ -85,24 +71,66 @@
 }
 
 .introtitle {
-  margin-top: -0.5rem;
-  margin-bottom: -3rem;
+  font-size: 18px;
   text-align: right;
+}
+
+.introsection {
+  margin-bottom: -1.5rem;
+}
+
+.portraitdiv {
+  text-align: left;
+  width: 33%;
+  margin-top: -1rem;
+  margin-bottom: -5rem;
 }
 
 .portrait {
   border-radius: 50%;
-  padding-left: 1.5rem;
   position: relative;
-  border: 5px !important; 
-  border-style: solid !important ;
-  align-self: right;
+  border: 5px !important;
+  border-style: solid !important;
+  align-self: left;
 }
 
-.portraitdiv {
-  margin-top: -1rem;
-  margin-bottom: -5rem;
+
+@media (max-width: 576px) {
+
+  .portraitContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .portraitdiv {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+  }
 }
+
+@media (max-width: 767px) {
+  .introsection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .introtitle {
+    text-align: center;
+    width: 100%;
+  }
+
+  .portraitdiv {
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    /* margin-top: -1rem;
+    margin-bottom: -5rem; */
+  }
+}
+
 
 .aboutmebtn {
   background-color: #93919e !important;
@@ -243,12 +271,12 @@
 }
 
 .fillwidth {
-  width: 100%; 
+  width: 100%;
   max-width: 100%;
 }
 
 .fillheight {
-  height: 100%; 
+  height: 100%;
 }
 
 .center {
@@ -260,7 +288,7 @@
 
 .centerh {
   display: flex;
- justify-content: center;
+  justify-content: center;
 }
 
 .centerv {
@@ -273,20 +301,20 @@
 }
 
 .imageGrid {
-  column-count: 3; /* Number of columns */
-  column-gap: 16px; /* Horizontal gap between columns */
+  column-count: 3;
+  column-gap: 16px;
 }
 
 .imageGrid .imageCell {
   display: inline-block;
   width: 100%;
-  margin-bottom: 16px; /* Vertical gap between images */
+  margin-bottom: 16px;
 }
 
 .imageGrid img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Maintain aspect ratio */
+  object-fit: cover;
 }
 
 .lightbox {
@@ -304,12 +332,12 @@
 }
 
 .lightboxContainer {
-  position: relative; 
+  position: relative;
 }
 
 .navigationButton {
-  position: absolute; 
-  top: 50%; 
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
@@ -334,26 +362,34 @@
 }
 
 @keyframes arrowAnimation {
-  0%, 100% {
-    transform: translateY(-50%) translateX(0); /* Initial position */
+
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
   }
+
   25% {
-    transform: translateY(-50%) translateX(10px); /* Move towards the center */
+    transform: translateY(-50%) translateX(10px);
   }
+
   50% {
-    transform: translateY(-50%) translateX(0); /* Move back */
+    transform: translateY(-50%) translateX(0);
   }
 }
 
 @keyframes arrowAnimationReverse {
-  0%, 100% {
-    transform: translateY(-50%) translateX(0); /* Initial position */
+
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(0);
   }
+
   25% {
-    transform: translateY(-50%) translateX(-10px); /* Move towards the center */
+    transform: translateY(-50%) translateX(-10px);
   }
+
   50% {
-    transform: translateY(-50%) translateX(0); /* Move back */
+    transform: translateY(-50%) translateX(0);
   }
 }
 
@@ -378,7 +414,6 @@
 
 .menuToggle {
   display: none;
-  /* Hide by default */
   cursor: pointer;
 }
 
@@ -397,18 +432,28 @@
 /* Media query to show hamburger menu on smaller screens */
 @media screen and (max-width: 768px) {
   .menuToggle {
-      display: block;
+    display: block;
   }
 
   .menu {
-      display: none;
-      /* Hide by default on small screens */
+    display: none;
+    /* Hide by default on small screens */
   }
 
   .open {
-      display: block;
-      /* Show when menu is open */
+    display: block;
+    /* Show when menu is open */
   }
+}
+
+.portraitContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.portraitText {
+  flex: 1;
 }
 
 .overlay {
@@ -424,7 +469,8 @@
   cursor: pointer;
 }
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   /* Style as needed, e.g., add top, right, left properties */
 }
@@ -445,7 +491,7 @@
   }
 
   .cardfill {
-    width: 80%; 
+    width: 80%;
     margin: -30px auto auto !important;
     padding: 0px;
   }
@@ -490,15 +536,15 @@
   }
 
   .focusbox {
-  overflow: hidden;
-  margin: auto;
+    overflow: hidden;
+    margin: auto;
   }
 
   .constraincenter {
     max-width: auto;
   }
 
-  .cardfill{
+  .cardfill {
     width: 33%;
     margin: auto !important;
   }
@@ -528,56 +574,6 @@
 
   .dropdownmenuclosed {
     display: none;
-  }
-
-  .menuclosed {
-    display: block;
-  }
-
-  .menuopen {
-    display: block;
-  }
-
-  .navexpandicon {
-    display: none;
-  }
-
-  .sociallink {
-    display: none;
-  }
-}
-
-@media (min-width: 992px) {
-  .introbg {
-    padding-top: 150px;
-    padding-bottom: 126px;
-  }
-
-  .constraincenter {
-    max-width: 1200px;
-    margin: auto;
-  }
-
-  .cardfill {
-    width: 80% !important; 
-    margin: -30px auto auto !important;
-  }
-
-  .cardtext {
-    padding-top: 0rem;
-    padding-bottom: 0rem;
-  }
-
-  .navbar .link {
-    display: block;
-  }
-
-  .navbarinline {
-    flex-direction: row !important;
-  }
-
-  .dropdownmenuopen {
-    position: fixed;
   }
 
   .menuclosed {
