@@ -30,6 +30,10 @@
   text-decoration: none;
 }
 
+.navbar .link:visited {
+  color: #f7f7f3;
+}
+
 .dropdownmenu {
   background-color: #db7792 !important;
   color: #f7f7f3;
