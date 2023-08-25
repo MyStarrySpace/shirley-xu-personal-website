@@ -2,12 +2,27 @@ import type { NextPage } from 'next'
 import styles from '../../styles/Home.module.css'
 import navstyles from '../../styles/NavBar.module.css'
 import Link from 'next/link'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 // import React, { Component, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar: NextPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isWindowLarge, setIsWindowLarge] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth > 992) {
+      setIsWindowLarge(true);
+    } else {
+      setIsWindowLarge(false);
+    }
+  };
+
+  useEffect(() => {
+    handleResize(); // Call it once initially
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -16,23 +31,23 @@ const Navbar: NextPage = () => {
   return (
     <nav className={`navbar navbar-expand-lg px-5 py-3 ${navstyles.navbar}`}>
       <div className="container-fluid">
-        <div className={`navbar-brand ${navstyles.navbarBrand}`}>
+        <div className={`navbar-brand`}>
           {/* Add your logo or branding here if needed */}
         </div>
         <button className={`navbar-toggler ${navstyles.navToggler}`} type="button" onClick={toggleMenu}>
           <span className={`navbar-toggler-icon ${navstyles.navbarTogglerIcon}`}></span>
         </button>
         <AnimatePresence>
-          {isMenuOpen && (
+          {(isMenuOpen || isWindowLarge) && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0, maxHeight: 0 }}
+              animate={{ opacity: 1, maxHeight: 500 }}
+              exit={{ opacity: 0, maxHeight: 0 }}
               transition={{ duration: 0.3 }}
-              className={`navbar-collapse show ${navstyles.navbarinline}`}
+              className={`navbar-collapse show`} 
               id="navbarNav"
             >
-              <ul className="navbar-nav">
+              <ul className={`navbar-nav ${navstyles.navbarinline}`}>
                 <li className={`nav-item px-2 ${navstyles.navItem}`}>
                   <Link href="/">
                     <a className={navstyles.link}>Home</a>
@@ -66,5 +81,6 @@ const Navbar: NextPage = () => {
     </nav>
   );
 };
+
 
 export default Navbar;
