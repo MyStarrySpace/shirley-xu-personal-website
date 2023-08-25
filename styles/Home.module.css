@@ -484,6 +484,10 @@
 }
 
 @media (min-width: 0px) {
+  .aboutmebtn {
+    margin-bottom: 1rem;
+  }
+  
   .introbg {
     padding-top: 50px;
     padding-bottom: 26px;
@@ -529,6 +533,7 @@
 }
 
 @media (min-width: 576px) {
+
   .introbg {
     padding-top: 70px;
     padding-bottom: 26px;
