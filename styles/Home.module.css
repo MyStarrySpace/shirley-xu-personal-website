@@ -94,7 +94,14 @@
 }
 
 .introsection {
+  text-align: center;
   margin-bottom: -1.5rem;
+}
+
+.centerColumns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .portraitdiv {
@@ -487,7 +494,7 @@
   .aboutmebtn {
     margin-bottom: 1rem;
   }
-  
+
   .introbg {
     padding-top: 50px;
     padding-bottom: 26px;
