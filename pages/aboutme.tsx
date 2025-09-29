@@ -100,13 +100,18 @@ const AboutMeIntro: NextPage = () => {
 									With a unique blend of technical expertise, artistic talent, and interdisciplinary curiosity, I am eager to contribute my skills to a dynamic team and take on new challenges. My background in both computer science and life sciences, coupled with my hands-on experience and love for creativity, positions me as a versatile and valuable asset. I look forward to the opportunity to continue building well-designed, innovative solutions that make a lasting impact.
 						       		</p>
 					    		</div>
-					    		<div className="row mb-3 p-0">
-					    			<div className="col px-3">
-					    				<a href="/files/shirley-xu-resume.pdf" className={"text-decoration-none"} download>
-					    					<button className={["btn p-3 mt-1", styles.contactmebtn, styles.fillwidth].join(' ')}>Download my Resume</button>
-					    				</a>
-					    			</div>
-					    		</div>
+								<div className="row mb-3 p-0">
+									<div className="col-12 col-md-6 px-3">
+										<a href="/files/Shirley_Xu_Resume.docx" className={"text-decoration-none"} download>
+											<button className={["btn p-3 mt-1", styles.contactmebtn, styles.fillwidth].join(' ')}>Download Word (.docx)</button>
+										</a>
+									</div>
+									<div className="col-12 col-md-6 px-3">
+										<a href="/files/Shirley_Xu_Resume.pdf" className={"text-decoration-none"} download>
+											<button className={["btn p-3 mt-1", styles.contactmebtn, styles.fillwidth].join(' ')}>Download PDF</button>
+										</a>
+									</div>
+								</div>
 					    	</div>
 					   	</div>	
 					   </div>
