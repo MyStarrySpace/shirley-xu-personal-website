@@ -13,6 +13,27 @@
     display: block;
     padding: 0.5rem 1rem;
     text-decoration: none;
+    color: #f7f7f3;
+}
+
+/* Ensure unvisited/visited states are not browser-default blue/purple */
+.link:link,
+.link:visited {
+    color: #f7f7f3;
+}
+
+/* Improve discoverability and focus visibility */
+.link:hover,
+.link:focus {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.link:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .navbar .link.icon {
